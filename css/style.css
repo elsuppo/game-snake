@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font: 400 1em/1 'Inter', sans-serif;;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    width: 400px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(243, 243, 243);
+    width: 360px;
+    height: 40px;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.header span {
+    display: block;
+}
+
+.records {
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px 40px 40px;
+    top: 0;
+    width: 180px;
+    height: 400px;
+    background-color: rgb(243, 243, 243);
+    right: -100%;
+    transition: all 0.3s ease;
+    z-index: 2;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    background-color: rgb(243, 243, 243);
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000;
+}
+
+.records.open {
+    position: absolute;
+    right: calc(50vw - 200px);
+}
+
+.records-switch {
+    z-index: 3;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(243, 243, 243);
+    width: 360px;
+    height: 40px;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.footer__github-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer__course-link {
+    margin-left: auto;
+}
+
+.footer__course-link img {
+    width: 50px;
+}
